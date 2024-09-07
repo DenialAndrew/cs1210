@@ -7,24 +7,24 @@
 
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 int main() {
 
+	// Declaring variables for the 3 RGB values 
+	// Declaring value for the smallest value whihc is used later
 	int valueRed;
 	int valueGreen;
 	int valueBlue;
 	int smallestValue;
 
-	cout << "Red value: " << endl;
+	// Gets the integer inputs for the 3 RGB values
 	cin >> valueRed;
-
-	cout << "Green value: " << endl;
 	cin >> valueGreen;
-
-	cout << "Blue value: " << endl;
 	cin >> valueBlue;
 	
+	// If-else branch which determines what the smallest value is
 	if ((valueRed <= valueGreen) && (valueRed <= valueBlue)) {
 		smallestValue = valueRed;
 	}
@@ -35,10 +35,12 @@ int main() {
 		smallestValue = valueBlue;
 	}
 	
+	// Subtracts the smallest value from each of the RGB values
 	valueRed   -= smallestValue;
 	valueGreen -= smallestValue;
 	valueBlue  -= smallestValue;
 
-	cout << valueRed << endl << valueGreen << endl << valueBlue << endl;
+	// Outputs (prints) the 3 RGB values in the desired format
+	cout << valueRed << " " << valueGreen << " " << valueBlue << endl;
 }
 
